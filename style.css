@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.project-card {
+  background: #222;
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 2rem;
+  background: #000;
+  text-align: center;
+  color: #aaa;
+}
