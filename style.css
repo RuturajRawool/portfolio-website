@@ -1,15 +1,32 @@
+:root {
+  --bg: #fff;
+  --text: #111;
+  --accent: #007bff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #121212, #1e1e1e);
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
 }
 
 .hero {
@@ -18,54 +35,72 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   text-align: center;
+  background: transparent;
+}
+
+#darkModeBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--accent);
+  border: none;
   color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  color: #ccc;
+main {
+  padding: 2rem;
 }
 
 section {
-  padding: 4rem 2rem;
+  margin: 4rem 0;
   text-align: center;
 }
 
-.project-card {
-  background: #222;
-  padding: 2rem;
+.project {
   margin: 1rem auto;
-  max-width: 600px;
-  border-radius: 12px;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 400px;
+  cursor: pointer;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-.project-card img {
-  max-width: 100%;
-  margin: 1rem 0;
-  border-radius: 8px;
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.project-card a {
-  color: #00bfff;
-  text-decoration: none;
-}
-
-.project-card:hover {
+.project:hover {
   transform: scale(1.05);
 }
 
-footer {
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--bg);
   padding: 2rem;
-  background: #000;
-  text-align: center;
-  color: #aaa;
+  border-radius: 10px;
+  max-width: 500px;
+  color: var(--text);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 2rem;
+  cursor: pointer;
 }
