@@ -1,18 +1,19 @@
-// GSAP Animations
+// Hero section animations
 gsap.from(".hero-title", {
   opacity: 0,
-  y: -50,
+  y: -40,
   duration: 1,
 });
 
 gsap.from(".hero-subtitle", {
   opacity: 0,
-  y: 50,
+  y: 40,
   duration: 1,
-  delay: 0.5,
+  delay: 0.3,
 });
 
-gsap.utils.toArray("section").forEach((section, i) => {
+// Animate each section on scroll
+gsap.utils.toArray("section").forEach(section => {
   gsap.from(section, {
     scrollTrigger: {
       trigger: section,
@@ -21,6 +22,5 @@ gsap.utils.toArray("section").forEach((section, i) => {
     opacity: 0,
     y: 50,
     duration: 1,
-    delay: i * 0.2,
   });
 });
