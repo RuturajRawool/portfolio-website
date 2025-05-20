@@ -2,52 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+
+  <div id="particles-js"></div>
   <header class="hero">
-    <h1 class="hero-title">Hi, I'm Ruturaj</h1>
-    <p class="hero-subtitle">Frontend Developer & UI/UX Designer</p>
+    <h1 id="typed-text"></h1>
+    <p class="subtitle">Frontend Developer | UI/UX Enthusiast</p>
+    <button id="darkModeBtn">Toggle Dark Mode</button>
   </header>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I’m a creative frontend developer who loves making beautiful, animated websites with HTML, CSS, JavaScript, and GSAP.</p>
-  </section>
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I specialize in creating visually engaging and user-friendly web applications using modern JavaScript and CSS animation libraries like GSAP.</p>
+    </section>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <p>HTML, CSS, JavaScript, React, GSAP, Figma</p>
-  </section>
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project" onclick="openModal('project1')">
+        <img src="assets/project1.jpg" alt="Project 1">
+        <h3>Landing Page</h3>
+      </div>
+      <div class="project" onclick="openModal('project2')">
+        <img src="assets/project2.jpg" alt="Project 2">
+        <h3>Portfolio App</h3>
+      </div>
+    </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <img src="assets/portfolio.png" alt="Portfolio preview" />
-      <a href="https://github.com/yourusername/portfolio">View Code</a>
-    </div>
-    <div class="project-card">
-      <h3>Weather App</h3>
-      <img src="assets/weather.png" alt="Weather app preview" />
-      <a href="https://github.com/yourusername/weather-app">View Code</a>
-    </div>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: rawoolruturaj@gmail.com</p>
-    <p><a href="https://www.linkedin.com/in/ruturaj-rawool-83b93728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></p>
-  </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: rahul@example.com</p>
+      <p><a href="https://linkedin.com/in/rahul" target="_blank">LinkedIn</a></p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Sarah. All rights reserved.</p>
+    <p>© 2025 Rahul. Built with ❤️ using HTML, CSS, JS & GSAP.</p>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p>This is a detailed view of the project. You can add video demos, code links, or more info here.</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
