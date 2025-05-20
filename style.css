@@ -2,24 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #111;
+  background: linear-gradient(135deg, #121212, #1e1e1e);
   color: #fff;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-header.hero {
+.hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   text-align: center;
+  color: #fff;
 }
 
 .hero-title {
@@ -42,8 +43,20 @@ section {
   padding: 2rem;
   margin: 1rem auto;
   max-width: 600px;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.project-card img {
+  max-width: 100%;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.project-card a {
+  color: #00bfff;
+  text-decoration: none;
 }
 
 .project-card:hover {
