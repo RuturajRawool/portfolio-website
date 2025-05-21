@@ -3,7 +3,7 @@ particlesJS.load('particles-js', 'particles.json');
 
 // Typing effect
 const typedText = document.getElementById("typed-text");
-const phrases = ["Hi, I'm Rahul", "I build dynamic websites", "Let's create something great!"];
+const phrases = ["Hi, I'm Ruturaj", "I build dynamic websites", "Let's create something great!"];
 let phraseIndex = 0, letterIndex = 0;
 
 function type() {
